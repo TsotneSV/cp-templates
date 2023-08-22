@@ -1,20 +1,20 @@
 namespace modop {
 
-    ll MOD = 1e9+7;
-    // ll MOD = 998244353;
+    ll mod = 1e9+7;
+    // ll mod = 998244353;
 
     vector<ll> fact;
 
     ll add(ll a,ll b) {
-        return ((a % MOD) + (b % MOD))%MOD;
+        return ((a % mod) + (b % mod))%mod;
     }
 
     ll sub(ll a,ll b) {
-        return ((a % MOD) - (b % MOD) + MOD)%MOD;
+        return ((a % mod) - (b % mod) + mod)%mod;
     }
     
     ll mult(ll a,ll b) {
-        return ((a % MOD) * (b % MOD))%MOD;
+        return ((a % mod) * (b % mod))%mod;
     }
 
     ll mpow(ll a,ll b) {
@@ -29,11 +29,15 @@ namespace modop {
     }
 
     ll modInv(ll a) {
-        return mpow(a,MOD-2);
+        return mpow(a,mod-2);
     }
 
     ll div(ll a,ll b) {
         return mult(a,modInv(b));
+    }
+
+    void set_mod(ll a) {
+        mod = a;
     }
 
     void gen_factorial(ll n) {
