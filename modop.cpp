@@ -41,7 +41,7 @@ namespace modop {
     }
 
     void gen_factorial(ll n) {
-        fact.resize(n + 1); fact[0] = 0;
+        fact.resize(n + 1); fact[0] = 1;
 
         for(ll i=1;i<=n;i++) {
             fact[i] = mult(fact[i-1],i);
