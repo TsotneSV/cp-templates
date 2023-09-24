@@ -23,8 +23,8 @@ typedef pair<int,int> pii;
 typedef pair<ll,ll> pll;
 typedef vector<int> vi;
 typedef vector<ll> vll;
-typedef vector<vpii> vpii;
-typedef vector<vpll> vpll;
+typedef vector<pii> vpii;
+typedef vector<pll> vpll;
 
 //const ll MOD=998244353;
 const ll MOD=1e9+7;
