@@ -1,4 +1,3 @@
-#pragma gcc diagnostic "-std=c++1z"
 #pragma GCC optimize("O3,unroll-loops")
 #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 
