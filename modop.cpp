@@ -1,6 +1,7 @@
 namespace modop {
 
-    const ll MOD = 1e9+7;//998244353;
+   // const ll MOD = 1e9+7;
+   // const ll MOD = 998244353;
 
     vector<ll> fact;
 
