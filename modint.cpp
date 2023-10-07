@@ -1,4 +1,4 @@
-namespace modop {
+namespace modint {
 
    // const ll MOD = 1e9+7;
    // const ll MOD = 998244353;
@@ -62,4 +62,4 @@ namespace modop {
 
 };
 
-using namespace modop;
+using namespace modint;
