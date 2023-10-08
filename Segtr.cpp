@@ -58,3 +58,17 @@ struct Node1 {
     }
 
 };
+
+struct Update1 {
+    ll val; // *
+
+    Update1(ll val) {
+        this->val = val;
+    }
+
+    void apply(Node1 &a) {
+        a.val = val;
+    }
+
+
+};
