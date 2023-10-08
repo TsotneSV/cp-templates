@@ -17,7 +17,7 @@ struct Segtr {
 
     void update(int v,int idx,int tl,int tr,Update addend) {
         if(tl == tr) {
-            addend.apply(v);
+            addend.apply(tree[v]);
         }else {
             int tm = (tl + tr)/2;
             update(2*v,idx,tl,tm,addend); update(2*v+1,idx,tm+1,tr,addend);
