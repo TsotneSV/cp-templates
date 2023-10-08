@@ -5,7 +5,7 @@ struct Segtr {
     int s;
     vector<Node> tree;
 
-    void build(int v,int tl,int tr,vector<ll> &arr) {
+    void build(int v,int tl,int tr,vector<int> &arr) {
         if(tl == tr) {
             tree[v] = Node(arr[tl]);
         }else {
@@ -35,7 +35,7 @@ struct Segtr {
         return ans;
     }
 
-    Segtr(int n,vector<ll> &arr) {
+    Segtr(int n,vector<int> &arr) {
         s = n;
 
         tree.resize(4*n);
