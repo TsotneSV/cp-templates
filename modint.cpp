@@ -1,7 +1,7 @@
 namespace modint {
 
-   // const ll MOD = 1e9+7;
-   // const ll MOD = 998244353;
+   // ll MOD = 1e9+7;
+   // ll MOD = 998244353;
 
     vector<ll> fact;
 
