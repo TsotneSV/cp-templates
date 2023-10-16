@@ -19,7 +19,7 @@ using namespace std;
 #define endl '\n'
 #define sz(x) ((long long) (x).size())
 #define all(x) (x).begin(),(x).end()
-#define deb(x) cout<<(x)<<endl
+#define out(x) cout<<(x)<<endl
 #define dbg(x) cerr<<#x<<" "<<x<<endl
 
 typedef long long ll;
