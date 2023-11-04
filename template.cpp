@@ -49,7 +49,7 @@ const ld pi = 3.14159265358979323846;
 
 
 
-void solve(int tc = 0){
+void solve(int tc){
 
 }
 
@@ -59,5 +59,5 @@ signed main(){
   
     int tc=1;
     // cin>>tc;
-    for(int t = 0; t < tc; t++) solve(t);
+    for(int t = 1; t <= tc; t++) solve(t);
 }
