@@ -4,9 +4,10 @@ using namespace std;
   (= ._.)
   / >  \>
 */
-#pragma GCC optimize("Ofast,no-stack-protector,unroll-loops")
-#pragma GCC optimize("no-stack-protector,fast-math")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+//#pragma comment(linker, "/stack:200000000")
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize ("unroll-loops")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native") // codeforces
 
 // #define int long long
 #define fi first
@@ -19,7 +20,8 @@ using namespace std;
 #define endl '\n'
 #define sz(x) ((long long) (x).size())
 #define all(x) (x).begin(),(x).end()
-#define out(x) cout<<(x)<<endl
+#define print(x) cout<<(x)<<" ";
+#define printl(x) cout<<(x)<<endl
 #define dbg(x) cerr<<#x<<" "<<x<<endl
 
 typedef long long ll;
