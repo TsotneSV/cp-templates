@@ -20,7 +20,8 @@ struct Segtr {
             addend.apply(tree[v]);
         }else {
             int tm = (tl + tr)/2;
-            update(2*v,idx,tl,tm,addend); update(2*v+1,idx,tm+1,tr,addend);
+            if(idx <= tm) update(2*v,idx,tl,tm,addend); 
+            else update(2*v+1,idx,tm+1,tr,addend);
             tree[v].merge(tree[2*v],tree[2*v+1]);
         }
     }
