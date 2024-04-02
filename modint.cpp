@@ -1,20 +1,20 @@
 namespace modint {
 
-   // ll MOD = 1e9+7;
-   // ll MOD = 998244353;
+    ll mod = 1e9+7;
+   // ll mod = 998244353;
 
-    vector<ll> fact;
+    vector<ll> fact,ifact;
 
-    ll add(ll a,ll b) {
-        return ((a % MOD) + (b % MOD))%MOD;
+    ll madd(ll a,ll b) {
+        return ((a % mod) + (b % mod))%mod;
     }
 
-    ll sub(ll a,ll b) {
-        return ((a % MOD) - (b % MOD) + MOD)%MOD;
+    ll msub(ll a,ll b) {
+        return ((a-b)%mod + mod)%mod;
     }
     
-    ll mult(ll a,ll b) {
-        return ((a % MOD) * (b % MOD))%MOD;
+    ll mmul(ll a,ll b) {
+        return ((a % mod) * (b % mod))%mod;
     }
 
     ll mpow(ll a,ll b) {
@@ -22,29 +22,30 @@ namespace modint {
 
         while(b) {
             if(b&1) {
-                ret = mult(ret,a);
+                ret = mmul(ret,a);
             } b/=2;
-            a = mult(a,a);
+            a = mmul(a,a);
         } return ret;
     }
 
-    ll modInv(ll a) {
-        return mpow(a,MOD-2);
+    ll minv(ll a) {
+        return mpow(a,mod-2);
     }
 
-    ll div(ll a,ll b) {
-        return mult(a,modInv(b));
+    ll mdiv(ll a,ll b) {
+        return mmul(a,minv(b));
     }
 
     void set_mod(ll a) {
-        MOD = a;
+        mod = a;
     }
 
-    void gen_factorial(ll n) {
-        fact.resize(n + 1); fact[0] = 1;
+    void gen_factorial(ll n=1e6+5) {
+        fact.resize(n + 1); ifact.resize(n+1); fact[0] = ifact[0] = 1;
 
         for(ll i=1;i<=n;i++) {
-            fact[i] = mult(fact[i-1],i);
+            fact[i] = mmul(fact[i-1],i);
+            ifact[i] = minv(fact[i]);
         }
     }
 
@@ -52,11 +53,13 @@ namespace modint {
 
         if(r > n || r < 0) return 0;
 
-        ll ret = 1;
+        return mmul(fact[n],mmul(ifact[r],ifact[n-r]));
+    }
 
-        for(ll i=1;i<=r;i++) {
-            ret = mult(ret,div(n-r+i,i));
-        } return ret;
+    ll nPr(ll n,ll r) {
+        if(r > n || r < 0) return 0;
+
+        return mdiv(fact[n],fact[n-r]); 
     }
 
 
