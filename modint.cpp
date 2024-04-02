@@ -10,7 +10,7 @@ namespace modint {
     }
 
     ll msub(ll a,ll b) {
-        return ((a-b)%mod + mod)%mod;
+        return ((a - b)%mod + mod)%mod;
     }
     
     ll mmul(ll a,ll b) {
