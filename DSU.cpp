@@ -22,6 +22,7 @@ struct DSU {
 
         if(u != v) {
             if(SIZE[u] < SIZE[v]) swap(u,v);
+            SIZE[u] += SIZE[v];
             parent[v] = u;
         }
     }
