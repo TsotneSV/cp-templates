@@ -46,7 +46,7 @@ struct Segtr {
 };
 
 struct Node1 {
-    ll val; // * shecvla sheidzleba
+    ll val; // * 
 
     void merge(Node1 &a,Node1 &b) {
         val = a.val + b.val; // *
