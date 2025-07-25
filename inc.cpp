@@ -22,7 +22,7 @@ void print(){cout<<'\n';}
 template<class h,class...t>
 void print(const h&v,const t&...u){cout<<v<<' ',print(u...);}
 
-#define ONLINE_JUDGE
+//#define ONLINE_JUDGE
 #ifndef ONLINE_JUDGE
 #include "debug.h"
 #else
