@@ -1,3 +1,5 @@
+// not randomized, might get hacked
+// use 2 hash values for safety
 struct HashedString {
     const ll mod = 1e9 + 7;
     const ll p = 125213;
